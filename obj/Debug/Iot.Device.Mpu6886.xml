@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Iot.Device.Mpu6886</name>
+    </assembly>
+    <members>
+        <member name="T:Iot.Device.Mpu6886.AccelerometerLowPowerMode">
+            <summary>
+            Averaging filter settings for Low Power Accelerometer mode. (Datasheet page 37)
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.AccelerometerLowPowerMode.Average4Samples">
+            <summary>
+            Average of 4 samples.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.AccelerometerLowPowerMode.Average8Samples">
+            <summary>
+            Average of 8 samples.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.AccelerometerLowPowerMode.Average16Samples">
+            <summary>
+            Average of 16 samples.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.AccelerometerLowPowerMode.Average32Samples">
+            <summary>
+            Average of 32 samples.
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Mpu6886.AccelerometerScale">
+            <summary>
+            Accelerometer scale. (Datasheet page 37)
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.AccelerometerScale.Scale2G">
+            <summary>
+            +- 2G
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.AccelerometerScale.Scale4G">
+            <summary>
+            +- 4G
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.AccelerometerScale.Scale8G">
+            <summary>
+            +- 8G
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.AccelerometerScale.Scale16G">
+            <summary>
+            +- 16G
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Mpu6886.EnabledAxis">
+            <summary>
+            Axes to enable
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.EnabledAxis.AccelerometerX">
+            <summary>
+            Accelerometer X axis.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.EnabledAxis.AccelerometerY">
+            <summary>
+            Accelerometer Y axis.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.EnabledAxis.AccelerometerZ">
+            <summary>
+            Accelerometer Z axis.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.EnabledAxis.GyroscopeX">
+            <summary>
+            Gyroscope X axis.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.EnabledAxis.GyroscopeY">
+            <summary>
+            Gyroscope Y axis.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.EnabledAxis.GyroscopeZ">
+            <summary>
+            Gyroscope Z axis.
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Mpu6886.GyroscopeScale">
+            <summary>
+            Gyroscope scale. (Datasheet page 37)
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.GyroscopeScale.Scale250dps">
+            <summary>
+            +- 250 dps
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.GyroscopeScale.Scale500dps">
+            <summary>
+            +- 500 dps
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.GyroscopeScale.Scale1000dps">
+            <summary>
+            +- 1000 dps
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.GyroscopeScale.Scale2000dps">
+            <summary>
+            +- 2000 dps
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Mpu6886.InterruptEnable">
+            <summary>
+            WoM interrupt on axes of accelerometer.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.InterruptEnable.None">
+            <summary>
+            All axes disabled.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.InterruptEnable.Xaxis">
+            <summary>
+            Enable X axis.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.InterruptEnable.Yaxis">
+            <summary>
+            Enable Y axis.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.InterruptEnable.Zaxis">
+            <summary>
+            Enable Z axis.
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope">
+            <summary>
+            Mpu6886 accelerometer and gyroscope
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.DefaultI2cAddress">
+            <summary>
+            The default I2C address for the MPU6886 sensor. (Datasheet page 49)
+            Mind that the address can be configured as well for 0x69 depending upon the value driven on AD0 pin.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.SecondaryI2cAddress">
+            <summary>
+            The secondary I2C address for the MPU6886 sensor. (Datasheet page 49)
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.#ctor(System.Device.I2c.I2cDevice)">
+            <summary>
+            Mpu6886 - Accelerometer and Gyroscope bus
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.GetAccelerometer">
+            <summary>
+            Reads the current accelerometer values from the registers, and compensates them with the accelerometer resolution.
+            </summary>
+            <returns>Vector of acceleration</returns>
+        </member>
+        <member name="M:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.GetGyroscope">
+            <summary>
+            Reads the current gyroscope values from the registers, and compensates them with the gyroscope resolution.
+            </summary>
+            <returns>Vector of the rotation</returns>
+        </member>
+        <member name="M:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.GetInternalTemperature">
+            <summary>
+            Reads the register of the on-chip temperature sensor which represents the MPU-6886 die temperature.
+            </summary>
+            <returns>Temperature in degrees Celcius</returns>
+        </member>
+        <member name="M:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.Calibrate(System.Int32)">
+            <summary>
+            Calibrate the gyroscope by calculating the offset values and storing them in the GyroscopeOffsetAdjustment registers of the MPU6886.
+            </summary>
+            <param name="iterations">The number of sample gyroscope values to read</param>
+            <returns>The calulated offset vector</returns>
+        </member>
+        <member name="P:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.GyroscopeOffset">
+            <summary>
+            Gets and sets the gyroscope offset in the GyroscopeOffsetAdjustment registers of the MPU6886.
+            Setting the offset can be usefull when a custom callibration calculation is used, instead of the Calibrate function of this class.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.Reset">
+            <summary>
+            Reset the internal registers and restores the default settings. (Datasheet, page 47)
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.Sleep">
+            <summary>
+            Set the chip to sleep mode. (Datasheet, page 47)
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.WakeUp">
+            <summary>
+            Disables the sleep mode. (Datasheet, page 47)
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.AccelerometerScale">
+            <summary>
+            Gets and sets the accelerometer full scale. (Datasheet page 37)
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.GyroscopeScale">
+            <summary>
+            Gets and sets the gyroscope full scale. (Datasheet page 37)
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.EnabledAxes">
+            <summary>
+            Sets the enabled axes of the gyroscope and accelerometer. (Datasheet page 47)
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.AccelerometerLowPowerMode">
+            <summary>
+            Gets and sets the averaging filter settings for low power accelerometer mode. (Datasheet page 37)
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.SampleRateDivider">
+            <summary>
+            Divides the internal sample rate (see register CONFIG) to generate the sample rate that 
+            controls sensor data output rate, FIFO sample rate. (Datasheet page 35)
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Mpu6886.Mpu6886AccelerometerGyroscope.AccelerometerInterruptEnabled">
+            <summary>
+            The axes on which the interrupt should be enabled.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Device.Spi</name>
+    </assembly>
+    <members>
+        <member name="T:System.Device.Spi.SpiBusInfo">
+            <summary>
+            Represents the info about a SPI bus.
+            </summary>
+        </member>
+        <member name="P:System.Device.Spi.SpiBusInfo.ChipSelectLineCount">
+            <summary>
+            Gets the number of chip select lines available on the bus.
+            </summary>
+            <value>
+            Number of chip select lines.
+            </value>
+        </member>
+        <member name="P:System.Device.Spi.SpiBusInfo.MaxClockFrequency">
+            <summary>
+            Maximum clock cycle frequency of the bus.
+            </summary>
+            <value>
+            The clock cycle in Hz.
+            </value>
+        </member>
+        <member name="P:System.Device.Spi.SpiBusInfo.MinClockFrequency">
+            <summary>
+            Minimum clock cycle frequency of the bus.
+            </summary>
+            <value>
+            The clock cycle in Hz.
+            </value>
+        </member>
+        <member name="P:System.Device.Spi.SpiBusInfo.SupportedDataBitLengths">
+            <summary>
+            Gets the bit lengths that can be used on the bus for transmitting data.
+            </summary>
+            <value>
+            The supported data lengths.
+            </value>
+        </member>
+        <member name="T:System.Device.Spi.DataFlow">
+            <summary>
+            Specifies order in which bits are transferred first on the SPI bus.
+            </summary>
+        </member>
+        <member name="F:System.Device.Spi.DataFlow.MsbFirst">
+            <summary>
+            Most significant bit will be sent first (most of the devices use this value).
+            </summary>
+        </member>
+        <member name="F:System.Device.Spi.DataFlow.LsbFirst">
+            <summary>
+            Least significant bit will be sent first.
+            </summary>
+        </member>
+        <member name="T:System.Device.Spi.SpiConnectionSettings">
+            <summary>
+            The connection settings of a device on a SPI bus.
+            </summary>
+        </member>
+        <member name="M:System.Device.Spi.SpiConnectionSettings.#ctor">
+            <summary>
+            Initializes new instance of SpiConnectionSettings.
+            </summary>
+        </member>
+        <member name="M:System.Device.Spi.SpiConnectionSettings.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Device.Spi.SpiConnectionSettings"/> class.
+            </summary>
+            <param name="busId">The bus ID the device is connected to.</param>
+            <param name="chipSelectLine">The chip select line used on the bus. Optional, -1 if not used</param>
+        </member>
+        <member name="P:System.Device.Spi.SpiConnectionSettings.BusId">
+            <summary>
+            The bus ID the device is connected to.
+            </summary>
+        </member>
+        <member name="P:System.Device.Spi.SpiConnectionSettings.ChipSelectLine">
+            <summary>
+            The chip select line used on the bus.
+            </summary>
+        </member>
+        <member name="P:System.Device.Spi.SpiConnectionSettings.Mode">
+            <summary>
+            The SPI mode being used.
+            </summary>
+        </member>
+        <member name="P:System.Device.Spi.SpiConnectionSettings.DataBitLength">
+            <summary>
+            The length of the data to be transfered.
+            </summary>
+        </member>
+        <member name="P:System.Device.Spi.SpiConnectionSettings.ClockFrequency">
+            <summary>
+            The frequency in which the data will be transferred.
+            </summary>
+        </member>
+        <member name="P:System.Device.Spi.SpiConnectionSettings.DataFlow">
+            <summary>
+            Specifies order in which bits are transferred first on the SPI bus.
+            </summary>
+        </member>
+        <member name="P:System.Device.Spi.SpiConnectionSettings.ChipSelectLineActiveState">
+            <summary>
+            Specifies which value on chip select pin means "active".
+            </summary>
+        </member>
+        <member name="P:System.Device.Spi.SpiConnectionSettings.SharingMode">
+            <summary>
+            Gets or sets the sharing mode for the SPI connection.
+            </summary>
+        </member>
+        <member name="T:System.Device.Spi.SpiDevice">
+            <summary>
+            The communications channel to a device on a SPI bus.
+            </summary>
+        </member>
+        <member name="P:System.Device.Spi.SpiDevice.ConnectionSettings">
+            <summary>
+            The connection settings of a device on a SPI bus. The connection settings are immutable after the device is created
+            so the object returned will be a clone of the settings object.
+            </summary>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.ReadByte">
+            <summary>
+            Reads a byte from the SPI device.
+            </summary>
+            <returns>A byte read from the SPI device.</returns>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.Read(System.SpanByte)">
+            <summary>
+            Reads data from the SPI device.
+            </summary>
+            <param name="buffer">
+            The buffer to read the data from the SPI device.
+            The length of the buffer determines how much data to read from the SPI device.
+            </param>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.Read(System.UInt16[])">
+            <summary>
+            Reads data from the SPI device.
+            </summary>
+            <param name="buffer">
+            The buffer to read the data from the SPI device.
+            The length of the buffer determines how much data to read from the SPI device.
+            </param>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.WriteByte(System.Byte)">
+            <summary>
+            Writes a byte to the SPI device.
+            </summary>
+            <param name="value">The byte to be written to the SPI device.</param>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.Write(System.UInt16[])">
+            <summary>
+            Writes data to the SPI device.
+            </summary>
+            <param name="buffer">
+            The buffer that contains the data to be written to the SPI device.
+            </param>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.Write(System.SpanByte)">
+            <summary>
+            Writes data to the SPI device.
+            </summary>
+            <param name="buffer">
+            The buffer that contains the data to be written to the SPI device.
+            </param>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.TransferFullDuplex(System.UInt16[],System.UInt16[])">
+            <summary>
+            Writes and reads data from the SPI device.
+            </summary>
+            <param name="writeBuffer">The buffer that contains the data to be written to the SPI device.</param>
+            <param name="readBuffer">The buffer to read the data from the SPI device.</param>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.TransferFullDuplex(System.SpanByte,System.SpanByte)">
+            <summary>
+            Writes and reads data from the SPI device.
+            </summary>
+            <param name="writeBuffer">The buffer that contains the data to be written to the SPI device.</param>
+            <param name="readBuffer">The buffer to read the data from the SPI device.</param>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.GetBusInfo(System.Int32)">
+            <summary>
+            Retrieves the info about a certain bus.
+            </summary>
+            <param name="busId">The id of the bus.</param>
+            <returns>The bus info requested.</returns>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.Create(System.Device.Spi.SpiConnectionSettings)">
+            <summary>
+            Creates a communications channel to a device on a SPI bus running on the current hardware.
+            </summary>
+            <param name="settings">The connection settings of a device on a SPI bus.</param>
+            <returns>A communications channel to a device on a SPI bus.</returns>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.#ctor(System.Device.Spi.SpiConnectionSettings)">
+            <summary>
+            Creates a communications channel to a device on a SPI bus running on the current hardware.
+            </summary>
+            <param name="settings">The connection settings of a device on a SPI bus.</param>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.Dispose">
+            <summary>
+            Disposes this instance
+            </summary>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.Dispose(System.Boolean)">
+            <summary>
+            Disposes this instance
+            </summary>
+            <param name="disposing"><see langword="true"/> if explicitly disposing, <see langword="false"/> if in finalizer</param>
+        </member>
+        <member name="M:System.Device.Spi.SpiDevice.Finalize">
+            <inheritdoc/>
+        </member>
+        <member name="T:System.Device.Spi.SpiDeviceAlreadyInUseException">
+            <summary>
+            Exception thrown when a check in driver's constructor finds a device that already exists with the same settings (SPI bus AND chip select line)
+            </summary>
+        </member>
+        <member name="M:System.Device.Spi.SpiDeviceAlreadyInUseException.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:System.Device.Spi.SpiMode">
+            <summary>
+            Defines how data is synchronized between devices on a SPI bus.
+            Clock Polarity (CPOL) determines if clock signal is low or high when in idle state.
+            Clock Phase (CPHA) determines when data is sampled relative to the clock signal.
+            </summary>
+        </member>
+        <member name="F:System.Device.Spi.SpiMode.Mode0">
+            <summary>
+            CPOL 0, CPHA 0. Polarity is idled low and data is sampled on rising edge of the clock signal.
+            </summary>
+        </member>
+        <member name="F:System.Device.Spi.SpiMode.Mode1">
+            <summary>
+            CPOL 0, CPHA 1. Polarity is idled low and data is sampled on falling edge of the clock signal.
+            </summary>
+        </member>
+        <member name="F:System.Device.Spi.SpiMode.Mode2">
+            <summary>
+            CPOL 1, CPHA 0. Polarity is idled high and data is sampled on falling edge of the clock signal.
+            </summary>
+        </member>
+        <member name="F:System.Device.Spi.SpiMode.Mode3">
+            <summary>
+            CPOL 1, CPHA 1. Polarity is idled high and data is sampled on rising edge of the clock signal.
+            </summary>
+        </member>
+        <member name="T:System.Device.Spi.SpiSharingMode">
+            <summary>
+            Defines the sharing mode for the SPI bus.
+            </summary>
+        </member>
+        <member name="F:System.Device.Spi.SpiSharingMode.Exclusive">
+            <summary>
+            SPI bus segment is not shared.
+            </summary>
+        </member>
+        <member name="F:System.Device.Spi.SpiSharingMode.Shared">
+            <summary>
+            SPI bus is shared.
+            </summary>
+        </member>
+    </members>
+</doc>

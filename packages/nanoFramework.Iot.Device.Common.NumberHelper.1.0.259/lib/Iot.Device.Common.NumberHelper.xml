@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Iot.Device.Common.NumberHelper</name>
+    </assembly>
+    <members>
+        <member name="T:Iot.Device.Common.NumberHelper">
+            <summary>
+            Helpers for number.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Common.NumberHelper.Bcd2Dec(System.Byte)">
+            <summary>
+            BCD To decimal
+            </summary>
+            <param name="bcd">BCD Code</param>
+            <returns>decimal</returns>
+        </member>
+        <member name="M:Iot.Device.Common.NumberHelper.Bcd2Dec(System.Byte[])">
+            <summary>
+            BCD To decimal
+            </summary>
+            <param name="bcds">BCD Code</param>
+            <returns>decimal</returns>
+        </member>
+        <member name="M:Iot.Device.Common.NumberHelper.Dec2Bcd(System.Int32)">
+            <summary>
+            Decimal To BCD
+            </summary>
+            <param name="dec">decimal</param>
+            <returns>BCD Code</returns>
+        </member>
+    </members>
+</doc>

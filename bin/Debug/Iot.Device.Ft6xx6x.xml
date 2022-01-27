@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Iot.Device.Ft6xx6x</name>
+    </assembly>
+    <members>
+        <member name="T:Iot.Device.Ft6xx6x.ChipType">
+            <summary>
+            The chip type
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.ChipType.Ft6236G">
+            <summary>
+            Ft6236G
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.ChipType.Ft6336G">
+            <summary>
+            Ft6336G
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.ChipType.Ft6336U">
+            <summary>
+            Ft6336U
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.ChipType.Ft6426">
+            <summary>
+            Ft6426
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Ft6xx6x.ConsumptionMode">
+            <summary>
+            The comsumption mode
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.ConsumptionMode.Active">
+            <summary>Active</summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.ConsumptionMode.Monitor">
+            <summary>Monitor</summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.ConsumptionMode.Standby">
+            <summary>Standby</summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.ConsumptionMode.Hibernate">
+            <summary>Hibernate</summary>
+        </member>
+        <member name="T:Iot.Device.Ft6xx6x.DoublePoints">
+            <summary>
+            A double point
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.DoublePoints.Point1">
+            <summary>
+            Gets or sets the first point.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.DoublePoints.Point2">
+            <summary>
+            Gets or sets the second point.
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Ft6xx6x.Event">
+            <summary>
+            The touch event type.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.Event.PressDown">
+            <summary>Press down</summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.Event.LiftUp">
+            <summary>Lift up</summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.Event.Contact">
+            <summary>Contact </summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.Event.NoEvent">
+            <summary>No event</summary>
+        </member>
+        <member name="T:Iot.Device.Ft6xx6x.FactoryMode">
+            <summary>
+            The factory modes.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.FactoryMode.Normal">
+            <summary>Normal</summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.FactoryMode.TestMode1">
+            <summary>Test Mode 1</summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.FactoryMode.TestMode2">
+            <summary>Test Mode 2</summary>
+        </member>
+        <member name="T:Iot.Device.Ft6xx6x.Point">
+            <summary>
+            A touch point
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Point.X">
+            <summary>
+            Gets or sets X
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Point.Y">
+            <summary>
+            Gets or sets Y
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Point.TouchId">
+            <summary>
+            Gets or sets the touche type.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Point.Weigth">
+            <summary>
+            Gets of sets the weight.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Point.Miscelaneous">
+            <summary>
+            Gets or sets miscelaneous.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Point.Event">
+            <summary>
+            Gets or sets the event type.
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Ft6xx6x.Ft6xx6x">
+            <summary>
+            Ft6xx6x touch screen
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ft6xx6x.Ft6xx6x.DefaultI2cAddress">
+            <summary>
+            Ft6xx6x I2C Address
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.ConsumptionMode">
+            <summary>
+            Gets or sets the consumption mode.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.ProximitySensingEnabled">
+            <summary>
+            Gets or sets the proximity sensing.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.ChargerOn">
+            <summary>
+            Gets or sets the charger mode type.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.MonitorModeEnabled">
+            <summary>
+            Gets or sets the touch screen to go to monitor mode.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.MonitorModeDelaySeconds">
+            <summary>
+            Gets or sets the time to go to monitor mode in seconds.
+            Maximum is 0x64.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.PeriodActive">
+            <summary>
+            Period for scaning and making results available.
+            Values between 0x04 and 0x14.
+            </summary>
+            <remarks>Do not pull results faster than this perdiod.</remarks>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.MonitorModePeriodActive">
+            <summary>
+            Gets or sets the period for scaning and making results available.
+            Values between 0x04 and 0x14.
+            </summary>
+            <remarks>Do not pull results faster than this perdiod.</remarks>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.TouchThreshold">
+            <summary>
+            Gets or setes the touch threshold
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.PointFilterThreshold">
+            <summary>
+            Gets or setes the point filter threshold
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ft6xx6x.Ft6xx6x.GestureEnabled">
+            <summary>
+            Gets or sets the gesture.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ft6xx6x.Ft6xx6x.#ctor(System.Device.I2c.I2cDevice)">
+            <summary>
+            Creates a new instance of the Ft6xx6x
+            </summary>
+            <param name="i2cDevice">The I2C device used for communication.</param>
+        </member>
+        <member name="M:Iot.Device.Ft6xx6x.Ft6xx6x.GetVersion">
+            <summary>
+            Gets the library version.
+            </summary>
+            <returns>The library version.</returns>
+        </member>
+        <member name="M:Iot.Device.Ft6xx6x.Ft6xx6x.SetInterruptMode(System.Boolean)">
+            <summary>
+            Sets the interrupt mode.
+            </summary>
+            <param name="modeLow">True to have int low when extending the report point otherwise when reporting poirt is not etended.</param>
+        </member>
+        <member name="M:Iot.Device.Ft6xx6x.Ft6xx6x.GetChipType">
+            <summary>
+            Gets the chip type.
+            </summary>
+            <returns>The chip type.</returns>
+        </member>
+        <member name="M:Iot.Device.Ft6xx6x.Ft6xx6x.SetFactoryMode(Iot.Device.Ft6xx6x.FactoryMode)">
+            <summary>
+            Sets the factory mode.
+            </summary>
+            <param name="mode">The factory mode.</param>
+        </member>
+        <member name="M:Iot.Device.Ft6xx6x.Ft6xx6x.GetNumberPoints">
+            <summary>
+            Gets the number of points detected.
+            </summary>
+            <returns>Number of points detected.</returns>
+        </member>
+        <member name="M:Iot.Device.Ft6xx6x.Ft6xx6x.GetPoint(System.Boolean)">
+            <summary>
+            Gets a point.
+            </summary>
+            <param name="first">True to get the first point.</param>
+            <returns>The point.</returns>
+        </member>
+        <member name="M:Iot.Device.Ft6xx6x.Ft6xx6x.GetDoublePoints">
+            <summary>
+            Get the double touch points.
+            </summary>
+            <returns>Double touch points.</returns>
+        </member>
+        <member name="M:Iot.Device.Ft6xx6x.Ft6xx6x.Dispose">
+            <summary>
+            Cleanup
+            </summary>
+        </member>
+    </members>
+</doc>

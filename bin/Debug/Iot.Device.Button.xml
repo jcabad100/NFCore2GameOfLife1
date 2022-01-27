@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Iot.Device.Button</name>
+    </assembly>
+    <members>
+        <member name="T:Iot.Device.Button.ButtonBase">
+            <summary>
+            Base implementation of Button logic.
+            Hardware independent. Inherit for specific hardware handling.
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Button.ButtonBase.ButtonPressedDelegate">
+            <summary>
+            Delegate for button pressed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Iot.Device.Button.ButtonBase.ButtonHoldingDelegate">
+            <summary>
+            Delegate for button holding.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:Iot.Device.Button.ButtonBase.ButtonUp">
+            <summary>
+            Delegate for button up event.
+            </summary>
+        </member>
+        <member name="E:Iot.Device.Button.ButtonBase.ButtonDown">
+            <summary>
+            Delegate for button down event.
+            </summary>
+        </member>
+        <member name="E:Iot.Device.Button.ButtonBase.Press">
+            <summary>
+            Delegate for button pressed event.
+            </summary>
+        </member>
+        <member name="E:Iot.Device.Button.ButtonBase.DoublePress">
+            <summary>
+            Delegate for button double pressed event.
+            </summary>
+        </member>
+        <member name="E:Iot.Device.Button.ButtonBase.Holding">
+            <summary>
+            Delegate for button holding event.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Button.ButtonBase.IsHoldingEnabled">
+            <summary>
+            Define if holding event is enabled or disabled on the button.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Button.ButtonBase.IsDoublePressEnabled">
+            <summary>
+            Define if double press event is enabled or disabled on the button.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Button.ButtonBase.IsPressed">
+            <summary>
+            Define if single press event is enabled or disabled on the button.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Button.ButtonBase.#ctor">
+            <summary>
+            Initialization of the button.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Button.ButtonBase.#ctor(System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Initialization of the button.
+            </summary>
+            <param name="doublePress"></param>
+            <param name="holding"></param>
+        </member>
+        <member name="M:Iot.Device.Button.ButtonBase.HandleButtonPressed">
+            <summary>
+            Handler for pressing the button.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Button.ButtonBase.HandleButtonReleased">
+            <summary>
+            Handler for releasing the button.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Button.ButtonBase.StartHoldingHandler(System.Object)">
+            <summary>
+            Handler for holding the button.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Button.ButtonBase.Dispose(System.Boolean)">
+            <summary>
+            Cleanup resources.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Iot.Device.Button.ButtonBase.Dispose">
+            <summary>
+            Public dispose method for IDisposable interface.
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Button.ButtonHoldingEventArgs">
+            <summary>
+            Button holding event arguments.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Button.ButtonHoldingEventArgs.HoldingState">
+            <summary>
+            Button holding state.
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Button.ButtonHoldingState">
+            <summary>
+            The different states of a button that is being held.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Button.ButtonHoldingState.Started">
+            <summary>Button holding started.</summary>
+        </member>
+        <member name="F:Iot.Device.Button.ButtonHoldingState.Completed">
+            <summary>Button holding completed.</summary>
+        </member>
+        <member name="F:Iot.Device.Button.ButtonHoldingState.Canceled">
+            <summary>Button holding cancelled.</summary>
+        </member>
+        <member name="T:Iot.Device.Button.GpioButton">
+            <summary>
+            GPIO implementation of Button.
+            Inherits from ButtonBase.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Button.GpioButton.#ctor(System.Int32,System.Device.Gpio.GpioController,System.Boolean,System.Device.Gpio.PinMode)">
+            <summary>
+            Initialization of the button.
+            </summary>
+            <param name="buttonPin">GPIO pin of the button.</param>
+            <param name="pinMode">Pin mode of the system.</param>
+            <param name="gpio">Gpio Controller.</param>
+            <param name="shouldDispose">True to dispose the GpioController.</param>
+        </member>
+        <member name="M:Iot.Device.Button.GpioButton.#ctor(System.Int32,System.TimeSpan,System.TimeSpan,System.Device.Gpio.GpioController,System.Boolean,System.Device.Gpio.PinMode)">
+            <summary>
+            Initialization of the button.
+            </summary>
+            <param name="buttonPin">GPIO pin of the button.</param>
+            <param name="pinMode">Pin mode of the system.</param>
+            <param name="doublePress">Max ticks between button presses to count as doublepress.</param>
+            <param name="holding">Min ms a button is pressed to count as holding.</param>
+            <param name="gpio">Gpio Controller.</param>
+            <param name="shouldDispose">True to dispose the GpioController.</param>
+        </member>
+        <member name="M:Iot.Device.Button.GpioButton.PinStateChanged(System.Object,System.Device.Gpio.PinValueChangedEventArgs)">
+            <summary>
+            Handles changes in GPIO pin, based on whether the system is pullup or pulldown.
+            </summary>
+            <param name="sender">The sender object.</param>
+            <param name="pinValueChangedEventArgs">The pin argument changes.</param>
+        </member>
+        <member name="M:Iot.Device.Button.GpioButton.Dispose(System.Boolean)">
+            <summary>
+            Internal cleanup.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+    </members>
+</doc>

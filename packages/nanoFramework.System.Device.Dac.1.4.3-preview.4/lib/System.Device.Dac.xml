@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Device.Dac</name>
+    </assembly>
+    <members>
+        <member name="T:System.Device.Dac.DacChannel">
+            <summary>
+            Represents a single DAC channel.
+            </summary>
+        </member>
+        <member name="P:System.Device.Dac.DacChannel.Controller">
+            <summary>
+            Gets the DAC controller for this channel.
+            </summary>
+            <value>
+            The DAC controller.
+            </value>
+        </member>
+        <member name="M:System.Device.Dac.DacChannel.WriteValue(System.UInt16)">
+            <summary>
+            Writes the analogue representation of the digital value to the DAC.
+            </summary>
+            <returns>
+            The success or failure.
+            </returns>
+        </member>
+        <member name="M:System.Device.Dac.DacChannel.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:System.Device.Dac.DacChannelAlreadyInUseException">
+            <summary>
+            Exception thrown when a check in <see cref="T:System.Device.Dac.DacChannel"/> constructor finds that the channel is already in use.
+            </summary>
+        </member>
+        <member name="M:System.Device.Dac.DacChannelAlreadyInUseException.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:System.Device.Dac.DacController">
+            <summary>
+            Represents an DAC controller on the system
+            </summary>
+        </member>
+        <member name="P:System.Device.Dac.DacController.DeviceCollection">
+            <summary>
+            Device collection associated with this <see cref="T:System.Device.Dac.DacController"/>.
+            </summary>
+            <remarks>
+            This collection is for internal use only.
+            </remarks>
+        </member>
+        <member name="P:System.Device.Dac.DacController.ChannelCount">
+            <summary>
+            The number of channels available on the ADC controller.
+            </summary>
+            <value>
+            Number of channels.
+            </value>
+        </member>
+        <member name="P:System.Device.Dac.DacController.ResolutionInBits">
+            <summary>
+            Gets the resolution of the controller as number of bits it has. For example, if we have a 10-bit DAC, that means it can detect 1024 (2^10) discrete levels.
+            </summary>
+            <value>
+            The number of bits the DAC controller has.
+            </value>
+        </member>
+        <member name="M:System.Device.Dac.DacController.GetDefault">
+            <summary>
+            Gets the default DAC controller on the system. 
+            </summary>
+            <returns>
+            The default DAC controller on the system, or null if the system has no DAC controller.
+            </returns>
+        </member>
+        <member name="M:System.Device.Dac.DacController.OpenChannel(System.Int32)">
+            <summary>
+            Opens a connection to the specified DAC channel.
+            </summary>
+            <param name="channelNumber">
+            The channel to connect to.
+            </param>
+            <returns>
+            The DAC channel.
+            </returns>
+        </member>
+        <member name="M:System.Device.Dac.DacController.GetDeviceSelector">
+            <summary>
+            Retrieves an string of all the DAC controllers on the system. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:System.Device.Dac.DacControllerManager.ControllersCollection">
+            <summary>
+            <see cref="T:System.Device.Dac.DacController"/> collection.
+            </summary>
+            <remarks>
+            This collection is for internal use only.
+            </remarks>
+        </member>
+    </members>
+</doc>
