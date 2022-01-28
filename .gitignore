@@ -293,3 +293,4 @@ __pycache__/
 # stub files in Interop sample
 samples/Interop/awesome-library/Stubs
 .vscode/settings.json
+.vs/NFCore2GameOfLife1/v17/.suo
